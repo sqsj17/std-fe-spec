@@ -1,6 +1,6 @@
 # `std-commitlint-config`
 
-> TODO: description
+> 提交检查
 
 ## Usage
 

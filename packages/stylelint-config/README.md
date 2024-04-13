@@ -1,6 +1,6 @@
 # `std-stylelint-config`
 
-> TODO: description
+> 样式检查
 
 ## Usage
 

@@ -1,6 +1,6 @@
 # `std-markdownlint-config`
 
-> TODO: description
+> 文档规范
 
 ## Usage
 
