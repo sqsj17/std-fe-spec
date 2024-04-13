@@ -1,4 +1,4 @@
-# lint-spec
+# std-fe-spec
 
 前端编码规范工程化
 
@@ -50,10 +50,10 @@
 
 ## 测试`markdown config`
 
-全局安装`std-markdownlint-cli`
+全局安装`markdownlint-cli`
 
 ```bash
-npm i -g std-markdownlint-cli
+npm i -g markdownlint-cli
 pnpm run lint
 ```
 
