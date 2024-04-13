@@ -31,6 +31,15 @@ features:
 
 </br>
 
+## 架构图
+｜
+<div align="center">
+    <img src="./guide.png" height="300" width="300">
+</div>
+
+
+
+
 ## :couch_and_lamp: 配套工具
 
 引入了多个业界流行的 `Linter` 作为规范文档的配套工具，并根据规范内容定制了对应的规则包，它们包括：
@@ -43,9 +52,9 @@ features:
 | 文档规范                                                          | [markdownlint](https://github.com/DavidAnson/markdownlint)     | [std-markdownlint-config](https://www.npmjs.com/package/std-markdownlint-config) |
 | Eslint 插件                                                       | [ESlint Plugin](https://eslint.org/docs/latest/extend/plugins) | [std-eslint-plugin](https://www.npmjs.com/package/std-eslint-plugin)             |
 
-[lint-cli](https://www.npmjs.com/package/lint-cli) 收敛屏蔽了上述依赖和配置细节，提供简单的 `CLI` 和 `Node.js API`，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
+[std-lint-cli](https://www.npmjs.com/package/std-lint-cli) 收敛屏蔽了上述依赖和配置细节，提供简单的 `CLI` 和 `Node.js API`，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
 
-您可以使用[lint-cli](https://www.npmjs.com/package/lint-cli) 方便地为项目接入全部规范。
+您可以使用[std-lint-cli](https://www.npmjs.com/package/std-lint-cli) 方便地为项目接入全部规范。
 
 </br>
 
