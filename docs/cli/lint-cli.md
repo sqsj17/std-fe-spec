@@ -1,20 +1,32 @@
+---
+title: std-lint-cli
+categories:
+  - 脚手架规范
+tags:
+  - 脚手架规范
+author:
+  name: 拾七
+  link: https://github.com/sqsj17/std-lint-spec
+---
+
 # std-lint-cli
 
-`std-lint-cli` 是[前端编码规范工程化](https://hebehealer.github.io/fe-spec/)的配套 Lint 工具，可以为项目一键接入规范、一键扫描和修复规范问题，保障项目的编码规范和代码质量。
+`std-lint-cli` 是[ 前端编码规范工程化](https://sqsj17.github.io/std-lint-spec/)的配套 Lint 工具，可以为项目一键接入规范、一键扫描和修复规范问题，保障项目的编码规范和代码质量。
 
 ## 背景
-引入了多个业界流行的 Linter，并根据规范内容定制了规则包，它们包括：
+
+我们引入了多个业界流行的 Linter，并根据规范内容定制了规则包，它们包括：
 
 | 规范                                                              | Lint 工具                                                  | npm 包                                                                                 |
 | ----------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | JavaScript 编码规范 <br/> TypeScript 编码规范 <br/> Node 编码规范 | [ESLint](https://eslint.org/)                              | [std-eslint-config](https://www.npmjs.com/package/std-eslint-config)             |
-| CSS 编码规范                                                      | [stylelint](https://stylelint.io/)                         | [std-stylelint-config](https://www.npmjs.com/package/std-stylelint-config) |
+| CSS 编码规范                                                      | [stylelint](https://stylelint.io/)                         | [std-stylelint-config](https://www.npmjs.com/package/std-stylelint-config)       |
 | Git 规范                                                          | [commitlint](https://commitlint.js.org/#/)                 | [std-commitlint-config](https://www.npmjs.com/package/std-commitlint-config)     |
 | 文档规范                                                          | [markdownlint](https://github.com/DavidAnson/markdownlint) | [std-markdownlint-config](https://www.npmjs.com/package/std-markdownlint-config) |
 
 可以看到这些 `Linter` 和规则包众多且零散，全部安装它们会给项目增加十几个依赖，接入和升级成本都比较高。
 
-`std-lint-cli` 收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
+`lint-cli` 收敛屏蔽了这些依赖和配置细节，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
 
 ## CLI 使用
 
@@ -46,8 +58,8 @@ npm install std-lint-cli -g
   - `.editorconfig`：符合规范的 [editorconfig](https://editorconfig.org/)
   - `.vscode/extensions.json`：写入规范相关的 [VSCode 插件推荐](https://code.visualstudio.com/docs/editor/extension-gallery#_workspace-recommended-extensions)，包括 `ESLint`、`stylelint`、`markdownlint`、`prettier` 等
   - `.vscode/settings.json`：写入规范相关的 [VSCode 设置](https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations)，设置 `ESLint` 和 `stylelint` 插件的 `validate` 及**保存时自动运行 fix**，如果选择使用 `Prettier`，会同时将 `prettier-vscode` 插件设置为各前端语言的 defaultFormatter，并配置**保存时自动格式化**
-  - `std-lint-cli.config.js`std-lint-cli 包的一些配置，如启用的功能等
-- 配置 git commit 卡口：使用 [husky](https://www.npmjs.com/package/husky) 设置代码提交卡口，在 git commit 时会运行 `std-lint-cli commit-file-scan` 和 `std-lint-cli commit-msg-scan` 分别对提交文件和提交信息进行规范检查。`std-lint-cli commit-file-scan` 默认仅对 error 问题卡口，如果你想对 warn 问题也卡口，可以增加 `--strict` 参数以开启严格模式
+  - `lint-cli.config.js`lint-cli 包的一些配置，如启用的功能等
+- 配置 git commit 卡口：使用 [husky](https://www.npmjs.com/package/husky) 设置代码提交卡口，在 git commit 时会运行 `lint-cli commit-file-scan` 和 `lint-cli commit-msg-scan` 分别对提交文件和提交信息进行规范检查。`lint-cli commit-file-scan` 默认仅对 error 问题卡口，如果你想对 warn 问题也卡口，可以增加 `--strict` 参数以开启严格模式
 
 > 注 1：如果项目已经配置过 ESLint、stylelint 等 Linter，执行 `std-lint-cli init` 将会提示存在冲突的依赖和配置，并在得到确认后进行覆盖：
 >
@@ -64,7 +76,7 @@ npm install std-lint-cli -g
 - `-i` `--include <dirpath>` 指定要进行规范扫描的目录
 - `--no-ignore` 忽略 eslint 的 ignore 配置文件和 ignore 规则
 
-> 注 1：事实上，你可以在任意目录执行 `std-lint-cli scan` `std-lint-cli` 会根据文件类型、JSON 等特征嗅探项目类型。但还是推荐在执行过 `std-lint-cli init` 的项目根目录执行 `std-lint-cli scan`，以得到最准确的扫描结果。
+> 注 1：事实上，你可以在任意目录执行 `std-lint-cli scan` `std-int-cli` 会根据文件类型、JSON 等特征嗅探项目类型。但我们还是推荐在执行过 `std-lint-cli init` 的项目根目录执行 `std-lint-cli scan`，以得到最准确的扫描结果。
 >
 > 注 2: `std-lint-cli` 会根据项目内有无 eslint 和 stylelint 配置文件判断使用项目的配置文件还是 `std-lint-cli` 默认配置进行扫描。若使用项目的，在未安装依赖时会帮其安装（执行 npm i）。若使用项目配置扫描失败，则使用默认配置扫描
 
@@ -108,7 +120,7 @@ npm install std-lint-cli --save
 示例：
 
 ```js
-(await std-lint-cli) -
+(await encode) -
   fe -
   lint.init({
     eslintType: 'react',
@@ -125,10 +137,10 @@ config 参数如下：
 | 参数               | 类型       | 默认值 | 说明                                                                                                                |
 | ------------------ | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | cwd                | string     | -      | 项目绝对路径                                                                                                        |
-| eslintType         | ESLintType | -      | 语言和框架类型，如果不配置，等同于 std-lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器        |
+| eslintType         | ESLintType | -      | 语言和框架类型，如果不配置，等同于 lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器        |
 | enableESLint       | boolean    | true   | 是否启用 ESLint，如果不配置默认值为 true，即默认启用 ESLint                                                         |
-| enableStylelint    | boolean    | -      | 是否启用 stylelint，如果不配置，等同于 std-lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器    |
-| enableMarkdownlint | boolean    | -      | 是否启用 markdownlint，如果不配置，等同于 std-lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器 |
+| enableStylelint    | boolean    | -      | 是否启用 stylelint，如果不配置，等同于 lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器    |
+| enableMarkdownlint | boolean    | -      | 是否启用 markdownlint，如果不配置，等同于 lint-cli init，控制台会出现选择器，如果配置，控制台就不会出现选择器 |
 | enablePrettier     | boolean    | -      | 是否启用 Prettier                                                                                                   |
 | disableNpmInstall  | boolean    | false  | 是否禁用自动在初始化完成后安装依赖                                                                                  |
 
