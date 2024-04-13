@@ -120,8 +120,6 @@ npm install std-lint-cli --save
 示例：
 
 ```js
-(await encode) -
-  fe -
   lint.init({
     eslintType: 'react',
     enableESLint: true,

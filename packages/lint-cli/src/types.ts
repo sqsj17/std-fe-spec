@@ -1,6 +1,6 @@
 import { ESLint } from 'eslint';
-import stylelint from 'stylelint';
 import markdownlint from 'markdownlint';
+import stylelint from 'stylelint';
 
 export interface PKG {
   eslintConfig?: any;
@@ -45,7 +45,7 @@ export interface ScanOptions {
   fix?: boolean;
   // 生成报告文件
   outputReport?: boolean;
-  // scan 时指定 encode-fe-lint config，优先级高于 encode-fe-lint.config.js
+  // scan 时指定 std-fe-lint config，优先级高于 std-fe-lint.config.js
   config?: Config;
 }
 
@@ -74,7 +74,7 @@ export interface ScanReport {
 
 export interface InitOptions {
   cwd: string;
-  // 是否检查并升级 encode-fe-lint 的版本
+  // 是否检查并升级 std-fe-lint 的版本
   checkVersionUpdate: boolean;
   // 是否需要自动重写 lint 配置
   rewriteConfig?: boolean;

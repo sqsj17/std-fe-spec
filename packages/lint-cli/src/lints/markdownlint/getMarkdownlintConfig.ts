@@ -2,7 +2,7 @@ import type { Config, PKG, ScanOptions } from '../../types';
 
 import glob from 'glob';
 import markdownLint from 'markdownlint';
-import markdownLintConfig from 'markdownlint-config-encode';
+import markdownLintConfig from 'std-markdownlint-config';
 import path from 'path';
 
 type LintOptions = markdownLint.Options & { fix?: boolean };

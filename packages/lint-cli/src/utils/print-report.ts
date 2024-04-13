@@ -1,10 +1,11 @@
+import { PKG_NAME, UNICODE } from './constants';
+
+import type { ScanResult } from '../types';
 import chalk from 'chalk';
-import table from 'text-table';
-import terminalLink from 'terminal-link';
 import isDocker from 'is-docker';
 import stripAnsi from 'strip-ansi';
-import { PKG_NAME, UNICODE } from './constants';
-import type { ScanResult } from '../types';
+import table from 'text-table';
+import terminalLink from 'terminal-link';
 
 /**
  * 在控制台打印扫描报告
@@ -64,7 +65,7 @@ export default (results: ScanResult[], fix: boolean): void => {
 
   // 扫描日志，预期:
   // ✖ x problems (y errors, z warnings)
-  // y error and z warnings potentially fixable with the `encode-fe-lint fix`
+  // y error and z warnings potentially fixable with the `std-fe-lint fix`
   //
   // ✔ no problems
   if (!fix && total > 0) {

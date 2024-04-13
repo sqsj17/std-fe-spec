@@ -31,7 +31,7 @@ npm install std-commitlint-config @commitlint/cli --save-dev
 
 ```javascript
 module.exports = {
-  extends: ['encode'],
+  extends: ['commitlint'],
 };
 ```
 
