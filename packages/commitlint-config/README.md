@@ -1,17 +1,17 @@
-# `commitlint-config`
+# `std-commitlint-config`
 
 > TODO: description
 
 ## Usage
 
 ```
-const commitlintConfig = require('commitlint-config');
+const commitlintConfig = require('std-commitlint-config');
 
 // TODO: DEMONSTRATE API
 ```
 ## 安装
 ```bash
-npm install en-commitlint-config @commitlint/cli --save-dev
+npm install std-commitlint-config @commitlint/cli --save-dev
 ```
 commitlint/cli 这个node > 18
 
@@ -20,7 +20,7 @@ commitlint/cli 这个node > 18
 
 ```javascript
 module.exports = {
-  extends: ['en-commitlint-config'],
+  extends: ['std-commitlint-config'],
 };
 ```
 

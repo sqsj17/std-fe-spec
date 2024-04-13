@@ -1,5 +1,5 @@
 {
-  "name": "stylelint-config",
+  "name": "std-stylelint-config",
   "version": "1.0.1",
   "description": "CSS规范",
   "author": "hebehealer@163.com <hebeleader@163.com>",
@@ -19,5 +19,6 @@
     "jest": "^29.5.0",
     "stylelint": "^14.3.0",
     "stylelint-scss": "^4.1.0"
-  }
+  },
+  "gitHead": "271b1c22f63c7066d7d3c08fc5eb97dee26547c2"
 }

@@ -1,9 +1,9 @@
 {
-  "name": "commitlint-config",
+  "name": "std-commitlint-config",
   "version": "1.0.1",
   "description": "提交检查",
   "keywords": [
-    "commitlint-config"
+    "std-commitlint-config"
   ],
   "author": "hebehealer@163.com <hebeleader@163.com>",
   "homepage": "",
@@ -11,5 +11,6 @@
   "main": "index.js",
   "dependencies": {
     "conventional-changelog-conventionalcommits": "^4.5.0"
-  }
+  },
+  "gitHead": "271b1c22f63c7066d7d3c08fc5eb97dee26547c2"
 }

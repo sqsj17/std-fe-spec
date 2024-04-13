@@ -1,5 +1,5 @@
 {
-  "name": "markdownlint-config",
+  "name": "std-markdownlint-config",
   "version": "1.0.1",
   "description": "文档规范",
   "author": "hebehealer@163.com <hebeleader@163.com>",
@@ -12,5 +12,6 @@
   ],
   "peerDependencies": {
     "markdownlint": "^0.28.1"
-  }
+  },
+  "gitHead": "271b1c22f63c7066d7d3c08fc5eb97dee26547c2"
 }

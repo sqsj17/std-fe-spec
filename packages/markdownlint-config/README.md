@@ -1,11 +1,11 @@
-# `markdownlint-config`
+# `std-markdownlint-config`
 
 > TODO: description
 
 ## Usage
 
 ```
-const markdownlintConfig = require('markdownlint-config');
+const markdownlintConfig = require('std-markdownlint-config');
 
 // TODO: DEMONSTRATE API
 ```
