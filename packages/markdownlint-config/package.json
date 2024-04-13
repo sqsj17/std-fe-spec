@@ -1,0 +1,16 @@
+{
+  "name": "markdownlint-config",
+  "version": "1.0.0",
+  "description": "文档规范",
+  "author": "hebehealer@163.com <hebeleader@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "index.json",
+  "keywords": [
+    "markdown",
+    "lint"
+  ],
+  "peerDependencies": {
+    "markdownlint": "^0.28.1"
+  }
+}

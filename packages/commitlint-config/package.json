@@ -1,0 +1,15 @@
+{
+  "name": "commitlint-config",
+  "version": "1.0.0",
+  "description": "提交检查",
+  "keywords": [
+    "commitlint-config"
+  ],
+  "author": "hebehealer@163.com <hebeleader@163.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "index.js",
+  "dependencies": {
+    "conventional-changelog-conventionalcommits": "^4.5.0"
+  }
+}
