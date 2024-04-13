@@ -157,9 +157,6 @@ importers:
       commander:
         specifier: ^6.2.1
         version: 6.2.1
-      commitlint-config-encode:
-        specifier: ^1.0.8
-        version: 1.0.8
       cross-spawn:
         specifier: ^7.0.3
         version: 7.0.3
@@ -172,9 +169,6 @@ importers:
       eslint-config-egg:
         specifier: ^10.0.0
         version: 10.0.0(eslint-import-resolver-typescript@2.7.1)(eslint@8.57.0)(typescript@4.9.5)
-      eslint-config-encode:
-        specifier: ^1.0.8
-        version: 1.0.8
       eslint-config-prettier:
         specifier: ^8.3.0
         version: 8.10.0(eslint@8.57.0)
@@ -226,9 +220,6 @@ importers:
       markdownlint:
         specifier: ^0.25.1
         version: 0.25.1
-      markdownlint-config-encode:
-        specifier: ^1.0.8
-        version: 1.0.8(markdownlint@0.25.1)
       markdownlint-rule-helpers:
         specifier: ^0.13.0
         version: 0.13.0
@@ -238,15 +229,24 @@ importers:
       prettier:
         specifier: ^2.2.1
         version: 2.8.8
+      std-commitlint-config:
+        specifier: ^1.0.3
+        version: link:../commitlint-config
+      std-eslint-config:
+        specifier: ^1.0.10
+        version: link:../eslint-config
+      std-markdownlint-config:
+        specifier: ^1.0.3
+        version: link:../markdownlint-config
+      std-stylelint-config:
+        specifier: ^1.0.3
+        version: link:../stylelint-config
       strip-ansi:
         specifier: ^6.0.0
         version: 6.0.1
       stylelint:
         specifier: ^14.3.0
         version: 14.16.1
-      stylelint-config-encode:
-        specifier: ^1.0.9
-        version: 1.0.9(stylelint-scss@4.7.0)(stylelint@14.16.1)
       stylelint-scss:
         specifier: ^4.1.0
         version: 4.7.0(stylelint@14.16.1)
@@ -6221,12 +6221,6 @@ packages:
     resolution: {integrity: sha512-hRpmWIKgzd81vn0ydoWoyPoALEOnF4wt8yKD35Ib1D6XC2siLiYaiqfGkYrunuKdsXGwpBpHU3+9r+RVw2NZfA==}
     engines: {node: '>= 12.0.0'}
 
-  /commitlint-config-encode@1.0.8:
-    resolution: {integrity: sha512-7Lw5PxnT+hMv3Dt+DiaT6A6Fv0wm7hn8fw2SaFUlD2Y7deSDD8ycXdD1GG5pPgZa662+lpiUu6NxbbMpxDSMpw==}
-    dependencies:
-      conventional-changelog-conventionalcommits: 4.6.3
-    dev: false
-
   /common-ancestor-path@1.0.1:
     resolution: {integrity: sha512-L3sHRo1pXXEqX8VU28kfgUY+YGsk09hPqZiZmLacNib6XNTCM8ubYeT7ryXQw8asB1sKgcU5lkB7ONug08aB8w==}
     dev: true
@@ -8103,10 +8097,6 @@ packages:
       - eslint-import-resolver-webpack
       - supports-color
       - typescript
-
-  /eslint-config-encode@1.0.8:
-    resolution: {integrity: sha512-2bl1ljL1azeq4MQPKHD8m/oo8Ly2oLr+g8i7F0le9f661JxQIblbw8pCNDacYvDVZ3/2K1OQPik/oiGvJ/0zPw==}
-    dev: false
 
   /eslint-config-prettier@8.10.0(eslint@8.57.0):
     resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
@@ -12953,14 +12943,6 @@ packages:
       uc.micro: 1.0.6
     dev: true
 
-  /markdownlint-config-encode@1.0.8(markdownlint@0.25.1):
-    resolution: {integrity: sha512-IPj5WMxoCzHNgujvblNXl42MPnqwdgjDPPQAqoumVbsqOApe4OkQlb8ywWGITyepuB2xnlDgSM+uYi9M9GwaGw==}
-    peerDependencies:
-      markdownlint: ^0.28.1
-    dependencies:
-      markdownlint: 0.25.1
-    dev: false
-
   /markdownlint-micromark@0.1.2:
     resolution: {integrity: sha512-jRxlQg8KpOfM2IbCL9RXM8ZiYWz2rv6DlZAnGv8ASJQpUh6byTBnEsbuMZ6T2/uIgntyf7SKg/mEaEBo1164fQ==}
     engines: {node: '>=14.18.0'}
@@ -16726,16 +16708,6 @@ packages:
       postcss: 7.0.39
       postcss-selector-parser: 3.1.2
     dev: true
-
-  /stylelint-config-encode@1.0.9(stylelint-scss@4.7.0)(stylelint@14.16.1):
-    resolution: {integrity: sha512-tp7+rB9UKKqksIrglKUaA4b93Zh/7QiL64lcthjn7ZYygcZMbdJ+f3mcvuVftAaNjXB9EeeD4HSxCp6lhUZl2g==}
-    peerDependencies:
-      stylelint: '>=8.3.0'
-      stylelint-scss: '>=2.0.0'
-    dependencies:
-      stylelint: 14.16.1
-      stylelint-scss: 4.7.0(stylelint@14.16.1)
-    dev: false
 
   /stylelint-scss@4.7.0(stylelint@14.16.1):
     resolution: {integrity: sha512-TSUgIeS0H3jqDZnby1UO1Qv3poi1N8wUYIJY6D1tuUq2MN3lwp/rITVo0wD+1SWTmRm0tNmGO0b7nKInnqF6Hg==}
