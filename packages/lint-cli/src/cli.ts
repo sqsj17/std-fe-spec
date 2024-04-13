@@ -1,20 +1,22 @@
 #!/usr/bin/env node
-import path from 'path';
-import fs from 'fs-extra';
-import ora from 'ora';
-import glob from 'glob';
-import { program } from 'commander';
-import spawn from 'cross-spawn';
-import { execSync } from 'child_process';
-import init from './actions/init';
-import scan from './actions/scan';
-import update from './actions/update';
-import log from './utils/log';
-import printReport from './utils/print-report';
-import npmType from './utils/npm-type';
-import { getCommitFiles, getAmendFiles } from './utils/git';
-import generateTemplate from './utils/generate-template';
+
 import { PKG_NAME, PKG_VERSION } from './utils/constants';
+import { getAmendFiles, getCommitFiles } from './utils/git';
+
+import { execSync } from 'child_process';
+import fs from 'fs-extra';
+import generateTemplate from './utils/generate-template';
+import glob from 'glob';
+import init from './actions/init';
+import log from './utils/log';
+import npmType from './utils/npm-type';
+import ora from 'ora';
+import path from 'path';
+import printReport from './utils/print-report';
+import { program } from 'commander';
+import scan from './actions/scan';
+import spawn from 'cross-spawn';
+import update from './actions/update';
 
 const cwd = process.cwd();
 
@@ -39,7 +41,7 @@ const installDepsIfThereNo = async () => {
 program
   .version(PKG_VERSION)
   .description(
-    `${PKG_NAME} 是 印客学院前端编码规范工程化 的配套 Lint 工具，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡点，降低项目实施规范的成本`,
+    `${PKG_NAME} 前端编码规范工程化 的配套 Lint 工具，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡点，降低项目实施规范的成本`,
   );
 
 program
