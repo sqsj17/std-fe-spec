@@ -43,7 +43,7 @@ export default defineConfig4CustomTheme({
       },
       {
         text: '脚手架',
-        items: [{ text: 'lint-cli', link: '/cli/lint-cli.md' }],
+        items: [{ text: 'std-lint-cli', link: '/cli/lint-cli.md' }],
       },
     ],
     sidebar: [
