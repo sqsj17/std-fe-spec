@@ -39,7 +39,7 @@ features:
 | ----------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | JavaScript 编码规范 <br/> TypeScript 编码规范 <br/> Node 编码规范 | [ESLint](https://eslint.org/)                                  | [std-eslint-config](https://www.npmjs.com/package/std-eslint-config)             |
 | CSS 编码规范                                                      | [stylelint](https://stylelint.io/)                             | [std-stylelint-config](https://www.npmjs.com/package/std-stylelint-config)       |
-| Git 规范                                                          | [commitlint](https://commitlint.js.org/#/)                     | [en-en-commitlint-config](https://www.npmjs.com/package/en-en-commitlint-config)     |
+| Git 规范                                                          | [commitlint](https://commitlint.js.org/#/)                     | [std-commitlint-config](https://www.npmjs.com/package/std-commitlint-config)     |
 | 文档规范                                                          | [markdownlint](https://github.com/DavidAnson/markdownlint)     | [std-markdownlint-config](https://www.npmjs.com/package/std-markdownlint-config) |
 | Eslint 插件                                                       | [ESlint Plugin](https://eslint.org/docs/latest/extend/plugins) | [std-eslint-plugin](https://www.npmjs.com/package/std-eslint-plugin)             |
 
