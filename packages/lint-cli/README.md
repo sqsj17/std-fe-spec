@@ -28,6 +28,8 @@ npm install std-lint-cli -g
 
 安装完成后，可执行 `std-lint-cli -h` 以验证安装成功。
 
+<img src="./WeChat6b7c138fe9db9381347d5bb6b1820c67.jpg" />
+
 ### 使用
 
 #### `std-lint-cli init`：一键接入
